@@ -87,6 +87,9 @@ def main():
     device = torch.device("cuda" if use_cuda else "cpu")
 
     kwargs = {'num_workers': 1, 'pin_memory': True} if use_cuda else {}
+    #####################################################
+    # implement your own myMNISTDataset at ./dataset.py #
+    #####################################################
     train_loader = torch.utils.data.DataLoader(
                     myMNISTDataset('data/train',
                        transform=transforms.Compose([
