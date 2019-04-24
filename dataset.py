@@ -17,4 +17,4 @@ class myMNISTDataset(Dataset):
         return num_images
 
     def __getitem__(self, idx):
-        return (data, target)
+        return (self.transform(data), target)
